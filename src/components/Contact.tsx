@@ -23,13 +23,61 @@ export default function Contact() {
   return (
     <section id="contact" className="py-32 md:py-48 relative overflow-hidden bg-bg-color transition-colors duration-300">
       {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] border border-blue-600/[0.03] rounded-full"></div>
-        <motion.div 
-          className="absolute top-[20%] right-[10%] w-4 h-4 bg-blue-600/10 rounded-full blur-[2px]"
-          animate={{ y: [0, -40, 0], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        
+        {/* Light Mode: Pattern Image */}
+        <div 
+          className="absolute inset-0 bg-[url('/contact-pattern.png')] bg-cover bg-center bg-no-repeat dark:hidden opacity-100 mix-blend-multiply"
+        ></div>
+
+        {/* Dark Mode: Animated Glowing Dots and Bubbles */}
+        <div className="hidden dark:block">
+          {/* Dot 1 - Blue */}
+          <motion.div 
+            className="absolute top-[15%] left-[8%] w-3.5 h-3.5 bg-blue-600 rounded-full blur-[3px] shadow-[0_0_30px_10px_rgba(37,99,235,0.4)] opacity-60"
+            animate={{ 
+              x: [0, 40, -20, 0], 
+              y: [0, -50, 20, 0], 
+              scale: [1, 1.6, 1], 
+              opacity: [0.4, 0.9, 0.4] 
+            }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          />
+          {/* Dot 2 - Brown */}
+          <motion.div 
+            className="absolute bottom-[25%] right-[12%] w-3.5 h-3.5 bg-[#8D5524] rounded-full blur-[3px] shadow-[0_0_30px_10px_rgba(141,85,36,0.4)] opacity-60"
+            animate={{ 
+              x: [0, -40, 20, 0], 
+              y: [0, 50, -20, 0], 
+              scale: [1, 1.6, 1], 
+              opacity: [0.4, 0.9, 0.4] 
+            }}
+            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", repeatType: "mirror" }}
+          />
+          {/* Dot 3 - Blue (Smaller) */}
+          <motion.div 
+            className="absolute top-[45%] left-[35%] w-2 h-2 bg-blue-600 rounded-full blur-[3px] shadow-[0_0_30px_10px_rgba(37,99,235,0.4)] opacity-60"
+            animate={{ 
+              x: [0, 30, -10, 0], 
+              y: [0, -30, 10, 0], 
+              scale: [1, 1.5, 1], 
+              opacity: [0.4, 0.9, 0.4] 
+            }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          />
+          
+          {/* Subtle Outline Circles (Bulles) */}
+          <motion.div 
+            className="absolute top-[-150px] left-[-100px] w-[500px] h-[500px] border-[2px] border-blue-600/20 dark:border-white/10 rounded-full"
+            animate={{ y: [0, -40, 0], x: [0, 20, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="absolute bottom-[5%] right-[2%] w-[350px] h-[350px] border-[2px] border-[#8D5524]/20 dark:border-white/10 rounded-full"
+            animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          />
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
 
 export default function Navbar() {
@@ -35,8 +36,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
-            <a href="#" className="font-display font-black text-2xl tracking-tighter text-foreground">
-              CHERI<span className="text-blue-600">F</span>
+            <a href="#" className="flex items-center gap-3 font-display font-black text-2xl tracking-tighter text-foreground">
+              <Image src="/logo.png" alt="Cherif Logo" width={48} height={48} className="object-contain" />
+              <span>CHERI<span className="text-blue-600">F</span></span>
             </a>
           </div>
           

@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
-import { Send, Sparkles, CheckCircle2 } from "lucide-react";
+import { Send, ShieldCheck, Zap } from "lucide-react";
 
 export default function Newsletter() {
   const { t } = useLanguage();
@@ -72,13 +72,13 @@ export default function Newsletter() {
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-6 md:gap-8 mt-10 md:mt-12 px-4">
-              <div className="flex items-center gap-2 text-white/40 text-[9px] md:text-[10px] font-black uppercase tracking-widest">
-                <Sparkles size={14} className="text-blue-600" />
-                SANS ENGAGEMENT
+              <div className="flex items-center gap-2 text-white/50 text-[9px] md:text-[10px] font-black uppercase tracking-widest">
+                <ShieldCheck size={14} className="text-[#8D5524]" />
+                ZÉRO SPAM GARANTI
               </div>
-              <div className="flex items-center gap-2 text-white/40 text-[9px] md:text-[10px] font-black uppercase tracking-widest">
-                <CheckCircle2 size={14} className="text-blue-600" />
-                CONTENU EXCLUSIF
+              <div className="flex items-center gap-2 text-white/50 text-[9px] md:text-[10px] font-black uppercase tracking-widest">
+                <Zap size={14} className="text-[#8D5524]" />
+                INSIGHTS PREMIUM
               </div>
             </div>
           </div>

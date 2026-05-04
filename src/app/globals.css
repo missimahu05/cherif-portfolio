@@ -2,19 +2,25 @@
 
 @theme {
   /* Premium Blue Editorial Palette (Default Light) */
-  --bg-color: #F8FAFC; /* Soft Blue-Grey Off-White */
+  --bg-color: #FFFFFF; /* Pure White */
   --text-color: #0F172A;
   --card-bg: #FFFFFF;
   --border-color: rgba(15, 23, 42, 0.08);
-  --nav-bg: rgba(248, 250, 252, 0.85);
+  --nav-bg: rgba(255, 255, 255, 0.85);
   --selection-bg: #2563EB;
   
-  --color-background: #F8FAFC; 
+  --color-background: #FFFFFF; 
   --color-foreground: #0F172A;
   --color-primary: #2563EB; 
   --color-secondary: #1E40AF; 
   --color-accent: #F1F5F9; 
   --color-brand-red: #8D5524; /* Marron/Camel Accent */
+  
+  /* Tailwind mappings for utilities */
+  --color-border-color: var(--border-color);
+  --color-bg-color: var(--bg-color);
+  --color-text-color: var(--text-color);
+  --color-card-bg: var(--card-bg);
   
   --font-sans: var(--font-montserrat), sans-serif;
   --font-display: var(--font-outfit), sans-serif;

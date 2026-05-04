@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp, FaTelegram } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -31,8 +32,9 @@ export default function Footer() {
           
           {/* Brand & Bio */}
           <div className="space-y-6 sm:col-span-1">
-            <h2 className="text-xl md:text-2xl font-display font-black tracking-tighter text-white">
-              CHERI<span className="text-blue-600">F</span>
+            <h2 className="flex items-center gap-3 text-xl md:text-2xl font-display font-black tracking-tighter text-white">
+              <Image src="/logo.png" alt="Cherif Logo" width={40} height={40} className="object-contain" />
+              <span>CHERI<span className="text-blue-600">F</span></span>
             </h2>
             <p className="text-white/35 text-[0.8rem] md:text-[0.85rem] leading-[1.8] md:leading-[1.9] max-w-[280px] font-medium">
               Stratège créatif et créateur de contenu spécialisé dans le Web3.
